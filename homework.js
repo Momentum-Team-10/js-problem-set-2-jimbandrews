@@ -7,13 +7,7 @@
 // If the potential member is in the array, remove all instances of it from the array.
 
 let remove = (people, person) => {
-    let lessPeople = [];
-    for (let word of people) {
-        if (word !== person){
-            lessPeople.push(word);
-        }
-    }
-    return lessPeople;
+    return people.filter((nonPerson) => nonPerson !== person);
 }
 
 // 2. Revisit your "remove" function. Make sure that it does not change the original
@@ -74,7 +68,16 @@ let minimum = (numbers) => {
 // https://courses.cs.vt.edu/csonline/Algorithms/Lessons/SelectionSort/index.html
 // to see how. This may make more sense to you.
 
-
+let selectionSort = (numbers) => {
+    let numsCopy = numbers.slice(0);
+    let numsFinal = [];
+    while (numsCopy.length > 0) {
+        let min = minimum(numsCopy);
+        numsFinal.push(min);
+        numsCopy.splice(numsCopy.indexOf(min), 1);
+    }
+    return numsFinal
+}
 
 
 // 7. Create a function called `textList` that takes an array and joins its elements
