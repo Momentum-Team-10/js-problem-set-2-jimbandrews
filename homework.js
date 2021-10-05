@@ -3,6 +3,14 @@
 // For example, `remove(['Cadence', 'Ordel', 'Marion'], 'Marion')` results
 // in `['Cadence', 'Ordel']`.
 //
+
+let remove = (people, person) => {
+    while (people.includes(person) === true) {
+        people.splice(people.indexOf(person), 1);
+    }
+    return people;
+}
+
 // If the potential member is not in the array, return the array unchanged.
 // If the potential member is in the array, remove all instances of it from the array.
 
