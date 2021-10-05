@@ -30,12 +30,16 @@ let remove = (people, person) => {
 //     return total;
 // }
 
+// let sum = (numbers) => {
+//     if (numbers.length === 0) {
+//         return 0;
+//     } else {
+//         return numbers.reduce((total, num) => total += num)
+//     }
+// }
+
 let sum = (numbers) => {
-    if (numbers.length === 0) {
-        return 0;
-    } else {
-        return numbers.reduce((total, num) => total += num)
-    }
+    return numbers.reduce((total, num) => total += num, 0)
 }
 
 // 4. Create a function called "average" that takes an array of numbers
