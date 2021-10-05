@@ -83,3 +83,23 @@ let minimum = (numbers) => {
 //
 // For example, `textList(['Cadence', 'Ordel', 'Marion'])` results in the string
 // `"Cadence,Ordel,Marion"`.
+
+let textList = (words) => {
+    if (words.length === 0) {
+        return "";
+    } else if (words.length === 1) {
+        return words[0];
+    } else {
+        let final = 0;
+        for (let word of words) {
+            if (final === 0) {
+                final = word + ",";
+            } else if (words.indexOf(word) == (words.length - 1)) {
+            final += word;
+            } else {
+            final += word + ",";
+            }
+        }
+        return final
+    }
+}
