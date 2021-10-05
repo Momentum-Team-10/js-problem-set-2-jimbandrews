@@ -7,7 +7,7 @@
 // If the potential member is in the array, remove all instances of it from the array.
 
 let remove = (people, person) => {
-    let lessPeople = []
+    let lessPeople = [];
     for (let word of people) {
         if (word !== person){
             lessPeople.push(word);
@@ -21,6 +21,14 @@ let remove = (people, person) => {
 
 // 3. Create a function called "sum" that takes an array of numbers and
 // returns the sum of those numbers.
+
+let sum = (numbers) => {
+    let total = 0;
+    for (let num of numbers) {
+        total += num;
+    }
+    return total;
+}
 
 // 4. Create a function called "average" that takes an array of numbers
 // and returns the average of those numbers.
