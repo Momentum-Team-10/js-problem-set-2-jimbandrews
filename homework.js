@@ -22,12 +22,20 @@ let remove = (people, person) => {
 // 3. Create a function called "sum" that takes an array of numbers and
 // returns the sum of those numbers.
 
+// let sum = (numbers) => {
+//     let total = 0;
+//     for (let num of numbers) {
+//         total += num;
+//     }
+//     return total;
+// }
+
 let sum = (numbers) => {
-    let total = 0;
-    for (let num of numbers) {
-        total += num;
+    if (numbers.length === 0) {
+        return 0;
+    } else {
+        return numbers.reduce((total, num) => total += num)
     }
-    return total;
 }
 
 // 4. Create a function called "average" that takes an array of numbers
@@ -77,6 +85,9 @@ let minimum = (numbers) => {
 // Note 2: Selection sort can be implemented using one array. Read the explanation at
 // https://courses.cs.vt.edu/csonline/Algorithms/Lessons/SelectionSort/index.html
 // to see how. This may make more sense to you.
+
+
+
 
 // 7. Create a function called `textList` that takes an array and joins its elements
 // into a string separated by commas.
