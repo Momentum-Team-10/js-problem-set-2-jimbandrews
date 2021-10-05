@@ -22,22 +22,6 @@ let remove = (people, person) => {
 // 3. Create a function called "sum" that takes an array of numbers and
 // returns the sum of those numbers.
 
-// let sum = (numbers) => {
-//     let total = 0;
-//     for (let num of numbers) {
-//         total += num;
-//     }
-//     return total;
-// }
-
-// let sum = (numbers) => {
-//     if (numbers.length === 0) {
-//         return 0;
-//     } else {
-//         return numbers.reduce((total, num) => total += num)
-//     }
-// }
-
 let sum = (numbers) => {
     return numbers.reduce((total, num) => total += num, 0)
 }
