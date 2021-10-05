@@ -33,8 +33,26 @@ let sum = (numbers) => {
 // 4. Create a function called "average" that takes an array of numbers
 // and returns the average of those numbers.
 
+let average = (numbers) => {
+    if (numbers.length === 0) {
+        return
+    }
+    let total = sum(numbers);
+    return total/numbers.length;
+}
+
 // 5. Create a function called "minimum" that takes an array of numbers and
 // returns the smallest number in that array.
+
+let minimum = (numbers) => {
+    let min = numbers[0];
+    for (let num of numbers) {
+        if (num < min) {
+            min = num;
+        }
+    }
+    return min;
+}
 
 // 6. There are many techniques to sort arrays in programming. Your programming
 // language will likely include the ability to do this. We are going to
